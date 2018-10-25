@@ -1,3 +1,24 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.menubtn{
+    width: 150px;
+    height: 40  px;
+    padding: 5px;
+    margin: 10px;
+    background-color: lightcoral;
+    border-bottom-color: lightcoral;
+    float: inherit;
+    text-justify: distribute-all-lines;
+    text-decoration-style: solid;
+}
+
+.menu{
+    padding-left: 45%;
+}
+
+.fondo{
+    background-color: rgba(236, 111, 215, 0.87) ;
+}

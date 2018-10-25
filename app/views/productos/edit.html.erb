@@ -1,6 +1,19 @@
-<h1>Editing Producto</h1>
-
-<%= render 'form', producto: @producto %>
-
-<%= link_to 'Show', @producto %> |
-<%= link_to 'Back', productos_path %>
+<html >
+    <head>
+            <link rel="stylesheet" type="text/css" href="../assets/clientes.scss">
+    </head>
+    <body>
+            <div class="jumbotron text-center fondo2">
+                <h1>Editar Clientes</h1>
+                    <p>Ruby on Rails</p> 
+            </div>
+            <div class="datos">
+                <%= render 'form', producto: @producto %>
+            </div>    
+            <div class="btn-group btnShow">
+                 <%= link_to 'Mostrar', @producto , class: 'btn btn-success .btn-lg' %> 
+                 <%= link_to 'Regresar', productos_path , class: 'btn btn-success .btn-lg' %>
+            </div>
+     </body>
+<html>
+                    

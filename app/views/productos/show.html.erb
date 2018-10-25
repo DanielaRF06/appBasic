@@ -1,14 +1,29 @@
 <p id="notice"><%= notice %></p>
+<html >
+    <head>
+            <link rel="stylesheet" type="text/css" href="../assets/clientes.scss">
+    </head>
+    <body>
+          <div class="jumbotron text-center fondo2">
+                  <h1>Productos</h1>
+                      <p>Ruby on Rails</p> 
+          </div>
+          
+          <div class="datos">
+              <p>
+                <strong>Nombre producto:</strong>
+                <%= @producto.nombre_producto %>
+              </p>
 
-<p>
-  <strong>Nombre producto:</strong>
-  <%= @producto.nombre_producto %>
-</p>
-
-<p>
-  <strong>Precio:</strong>
-  <%= @producto.precio %>
-</p>
-
-<%= link_to 'Edit', edit_producto_path(@producto) %> |
-<%= link_to 'Back', productos_path %>
+              <p>
+                <strong>Precio:</strong>
+                <%= @producto.precio %>
+              </p>
+          </div>
+          <div class = "btn-group btnShow">
+              <%= link_to 'Editar', edit_producto_path(@producto)  , class: 'btn btn-success .btn-lg'%>
+              <%= link_to 'Regresar', productos_path , class: 'btn btn-success .btn-lg' %>
+          </div>
+        </body>
+        
+<html>

@@ -1,5 +1,17 @@
-<h1>New Orden</h1>
-
-<%= render 'form', orden: @orden %>
-
-<%= link_to 'Back', ordens_path %>
+<html >
+    <head>
+            <link rel="stylesheet" type="text/css" href="../assets/ordens.scss">
+    </head>
+    <body>
+          <div class="jumbotron text-center fondo2">
+                  <h1>Ordenes</h1>
+                      <p>Ruby on Rails</p> 
+          </div>
+          <div class="datos">
+                <%= render 'form', orden: @orden %>
+         </div>
+          <div class="btn-group datos">
+                <%= link_to 'Regresar', ordens_path , class: 'btn btn-success .btn-lg'%>
+         </div>
+                 </body>
+            <html>

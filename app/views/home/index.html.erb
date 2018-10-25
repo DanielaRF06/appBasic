@@ -1,14 +1,27 @@
-<%= link_to "Saludo",saludo_path %>
-<br>
+<html>
+    <head>
+            <link rel="stylesheet" type="text/css" href="../assets/home.scss">
+    </head>
+    <body>
+        <div class="jumbotron text-center fondo">
+            <h1>Infraestructura Web</h1>
+            <p>Ruby on Rails</p> 
+        </div>
+        <div class=menu>
+            <%= link_to "Saludo",saludo_path,class: 'btn btn-success .btn-lg menubtn' %>
+            <br>
 
-<%= link_to "Clientes",clientes_path %>
-<br>
+            <%= link_to "Clientes",clientes_path ,class: 'btn btn-success .btn-lg menubtn' %>
+            <br>
 
-<%= link_to "Productos",productos_path %>
-<br>
+            <%= link_to "Productos",productos_path ,class: 'btn btn-success .btn-lg menubtn'%>
+            <br>
 
-<%= link_to "Ordenes",ordens_path %>
-<br>
+            <%= link_to "Ordenes",ordens_path,class: 'btn btn-success .btn-lg menubtn' %>
+            <br>
 
-<%= link_to "Detalle Ordenes",det_ordens_path %>
-<br>
+            <%= link_to "Detalle Ordenes",det_ordens_path,class: 'btn btn-success .btn-lg menubtn' %>
+            <br>
+        </div>
+    </body>
+</html>

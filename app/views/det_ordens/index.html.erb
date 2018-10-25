@@ -1,31 +1,43 @@
 <p id="notice"><%= notice %></p>
+<html>
+    <head>
+            <link rel="stylesheet" type="text/css" href="../assets/det_ordens.scss">
+    </head>
+    <body>
+        <div class="jumbotron text-center fondo">
+            <h1>Detalle de orden</h1>
+            <p>Ruby on Rails</p> 
+        </div>    
 
-<h1>Det Ordens</h1>
+        <table class="table ">
+              <thead>
+                <tr>
+                  <th>Producto</th>
+                  <th>Cantidad</th>
+                  <th>Precio venta</th>
+                  <th colspan="3"></th>
+                </tr>
+              </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Producto</th>
-      <th>Cantidad</th>
-      <th>Precio venta</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+              <tbody>
+                <% @det_ordens.each do |det_orden| %>
+                  <tr>
+                    <td><%= det_orden.producto %></td>
+                    <td><%= det_orden.cantidad %></td>
+                    <td><%= det_orden.precio_venta %></td>
+                    <td><%= link_to 'Mostrar', det_orden, class: 'btn btn-primary btn-xs tbtn' %></td>
+                    <td><%= link_to 'Editar', edit_det_orden_path(det_orden), class: 'btn btn-info btn-xs tbtn'  %></td>
+                    <td><%= link_to 'Eliminar', det_orden, method: :delete, data: { confirm: 'Are you sure?' } ,class: 'btn btn-danger btn-xs tbtn'%></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
 
-  <tbody>
-    <% @det_ordens.each do |det_orden| %>
-      <tr>
-        <td><%= det_orden.producto %></td>
-        <td><%= det_orden.cantidad %></td>
-        <td><%= det_orden.precio_venta %></td>
-        <td><%= link_to 'Show', det_orden %></td>
-        <td><%= link_to 'Edit', edit_det_orden_path(det_orden) %></td>
-        <td><%= link_to 'Destroy', det_orden, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+            <br>
 
-<br>
-
-<%= link_to 'New Det Orden', new_det_orden_path %>
+           
+            <div class=menu>
+              <%= link_to 'New Det Orden', new_det_orden_path, class: 'btn btn-success .btn-lg btns'  %>
+        </div>
+    </body>
+<html>      

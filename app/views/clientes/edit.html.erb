@@ -1,6 +1,19 @@
-<h1>Editing Cliente</h1>
+<html >
+    <head>
+            <link rel="stylesheet" type="text/css" href="../assets/clientes.scss">
+    </head>
+    <body>
+            <div class="jumbotron text-center fondo2">
+                <h1>Editar Clientes</h1>
+                    <p>Ruby on Rails</p> 
+            </div>
+           
+                    <%= render 'form', cliente: @cliente %>
+            
 
-<%= render 'form', cliente: @cliente %>
-
-<%= link_to 'Show', @cliente %> |
-<%= link_to 'Back', clientes_path %>
+            <div class="btn-group btnShow">
+                <%= link_to 'Mostrar', @cliente , class: 'btn btn-success .btn-lg'%> 
+                <%= link_to 'Regresar', clientes_path , class: 'btn btn-success .btn-lg'%>
+            </div>
+    </body>
+<html>

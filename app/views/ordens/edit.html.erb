@@ -1,6 +1,19 @@
-<h1>Editing Orden</h1>
-
-<%= render 'form', orden: @orden %>
-
-<%= link_to 'Show', @orden %> |
-<%= link_to 'Back', ordens_path %>
+<html >
+    <head>
+            <link rel="stylesheet" type="text/css" href="../assets/ordens.scss">
+    </head>
+    <body>
+          <div class="jumbotron text-center fondo2">
+                  <h1>Ordenes</h1>
+                      <p>Ruby on Rails</p> 
+          </div>
+          
+          <div class="datos">
+                    <%= render 'form', orden: @orden %>
+           </div>
+            <div class = "btn-group btnShow">
+                    <%= link_to 'Show', @orden, class: 'btn btn-success .btn-lg tbtn'  %>
+                    <%= link_to 'Back', ordens_path , class: 'btn btn-success .btn-lg tbtn' %>
+                    </div>
+                    </body>
+               <html>

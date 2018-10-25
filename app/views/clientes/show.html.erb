@@ -1,14 +1,28 @@
 <p id="notice"><%= notice %></p>
+<html >
+    <head>
+            <link rel="stylesheet" type="text/css" href="../assets/clientes.scss">
+    </head>
+    <body>
+          <div class="jumbotron text-center fondo2">
+                  <h1>Cliente</h1>
+                      <p>Ruby on Rails</p> 
+          </div>
+          
+          <div class="datos">
+                <p>
+                  <strong>RFC:</strong>
+                  <%= @cliente.rfc %>
+                </p>
 
-<p>
-  <strong>RFC:</strong>
-  <%= @cliente.rfc %>
-</p>
-
-<p>
-  <strong>Nombre:</strong>
-  <%= @cliente.nom_cliente %>
-</p>
-
-<%= link_to 'Edit', edit_cliente_path(@cliente) %> |
-<%= link_to 'Back', clientes_path %>
+                <p>
+                  <strong>Nombre:</strong>
+                  <%= @cliente.nom_cliente %>
+                </p>
+          </div>
+          <div class = "btnShow">
+              <%= link_to 'Editar', edit_cliente_path(@cliente), class: 'btn btn-success .btn-lg tbtn' %> 
+              <%= link_to 'Regresar', clientes_path, class: 'btn btn-success .btn-lg tbtn' %>
+          </div>
+      </body>
+ <html>

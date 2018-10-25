@@ -1,29 +1,40 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Productos</h1>
+<html>
+    <head>
+            <link rel="stylesheet" type="text/css" href="../assets/ordens.scss">
+    </head>
+    <body>
+        <div class="jumbotron text-center fondo">
+            <h1>Productos</h1>
+            <p>Ruby on Rails</p> 
+        </div>    
 
-<table>
-  <thead>
-    <tr>
-      <th>Nombre producto</th>
-      <th>Precio</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+        <table class="table ">
+              <thead>
+                <tr>
+                  <th>Nombre producto</th>
+                  <th>Precio</th>
+                  <th colspan="3"></th>
+                </tr>
+              </thead>
 
-  <tbody>
-    <% @productos.each do |producto| %>
-      <tr>
-        <td><%= producto.nombre_producto %></td>
-        <td><%= producto.precio %></td>
-        <td><%= link_to 'Show', producto %></td>
-        <td><%= link_to 'Edit', edit_producto_path(producto) %></td>
-        <td><%= link_to 'Destroy', producto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+              <tbody>
+                <% @productos.each do |producto| %>
+                  <tr>
+                    <td><%= producto.nombre_producto %></td>
+                    <td><%= producto.precio %></td>
+                    <td><%= link_to 'Mostrar', producto ,class: 'btn btn-primary btn-xs tbtn' %></td>
+                    <td><%= link_to 'Editar', edit_producto_path(producto),class: 'btn btn-info btn-xs tbtn'  %></td>
+                    <td><%= link_to 'Eliminar', producto, method: :delete, data: { confirm: 'Are you sure?' } ,class: 'btn btn-danger btn-xs tbtn'%></td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
 
-<br>
-
-<%= link_to 'New Producto', new_producto_path %>
+            <br>
+            <div class=menu>
+              <%= link_to 'New Producto', new_producto_path , class: 'btn btn-success .btn-lg btns'%>
+            </div>
+      </body>
+<html>

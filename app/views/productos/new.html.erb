@@ -1,5 +1,17 @@
-<h1>New Producto</h1>
-
-<%= render 'form', producto: @producto %>
-
-<%= link_to 'Back', productos_path %>
+<html>
+    <head>
+            <link rel="stylesheet" type="text/css" href="../assets/productos.scss">
+    </head>
+    <body>
+            <div class="jumbotron text-center fondo2">
+                <h1>Nuevo Producto</h1>
+                    <p>Ruby on Rails</p> 
+            </div>
+            <div class="datos">
+                <%= render 'form', producto: @producto %>
+            </div>
+            <div class="btn-group datos">
+                <%= link_to 'Regresar', productos_path, class: 'btn btn-success .btn-lg' %>
+                </div>
+    </body>
+<html>

@@ -1,14 +1,27 @@
 <p id="notice"><%= notice %></p>
+<html >
+    <head>
+            <link rel="stylesheet" type="text/css" href="../assets/ordens.scss">
+    </head>
+    <body>
+          <div class="jumbotron text-center fondo2">
+                  <h1>Ordenes</h1>
+                      <p>Ruby on Rails</p> 
+          </div>
+          <div class="datos">
+              <p>
+                <strong>Cliente:</strong>
+                <%= @orden.cliente %>
+              </p>
 
-<p>
-  <strong>Cliente:</strong>
-  <%= @orden.cliente %>
-</p>
-
-<p>
-  <strong>Fecha:</strong>
-  <%= @orden.fecha %>
-</p>
-
-<%= link_to 'Edit', edit_orden_path(@orden) %> |
-<%= link_to 'Back', ordens_path %>
+              <p>
+                <strong>Fecha:</strong>
+                <%= @orden.fecha %>
+              </p>
+         </div>
+          <div class = "btnShow">
+            <%= link_to 'Edit', edit_orden_path(@orden), class: 'btn btn-success .btn-lg' %> 
+            <%= link_to 'Back', ordens_path , class: 'btn btn-success .btn-lg'%>
+            </div>
+            </body>
+       <html>

@@ -1,6 +1,16 @@
-<h1>Editing Det Orden</h1>
-
-<%= render 'form', det_orden: @det_orden %>
-
-<%= link_to 'Show', @det_orden %> |
-<%= link_to 'Back', det_ordens_path %>
+<html >
+    <head>
+            <link rel="stylesheet" type="text/css" href="../assets/det_ordens.scss">
+    </head>
+    <body>
+            <div class="jumbotron text-center fondo2">
+                <h1>Editar Clientes</h1>
+                    <p>Ruby on Rails</p> 
+            </div>
+                    <%= render 'form', det_orden: @det_orden %>
+            <div class="btn-group btnShow">
+                <%= link_to 'Show', @det_orden , class: 'btn btn-success .btn-lg'%>
+                <%= link_to 'Back', det_ordens_path , class: 'btn btn-success .btn-lg'%>
+            </div>
+    </body>
+<html>

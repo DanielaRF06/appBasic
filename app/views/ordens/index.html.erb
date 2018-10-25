@@ -1,29 +1,39 @@
 <p id="notice"><%= notice %></p>
+<html>
+    <head>
+            <link rel="stylesheet" type="text/css" href="../assets/ordens.scss">
+    </head>
+    <body>
+        <div class="jumbotron text-center fondo">
+            <h1>Ordenes</h1>
+            <p>Ruby on Rails</p> 
+        </div>    
 
-<h1>Ordens</h1>
+        <table class="table ">
+          <thead>
+            <tr>
+              <th>Cliente</th>
+              <th>Fecha</th>
+              <th colspan="3"></th>
+            </tr>
+          </thead>
 
-<table>
-  <thead>
-    <tr>
-      <th>Cliente</th>
-      <th>Fecha</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+          <tbody>
+            <% @ordens.each do |orden| %>
+              <tr>
+                <td><%= orden.cliente %></td>
+                <td><%= orden.fecha %></td>
+                <td><%= link_to 'Mostrar', orden ,class: 'btn btn-primary btn-xs tbtn'%></td>
+                <td><%= link_to 'Editar', edit_orden_path(orden),class: 'btn btn-info btn-xs tbtn' %></td>
+                <td><%= link_to 'Eliminar', orden, method: :delete, data: { confirm: '¿Estas seguro?' },class: 'btn btn-danger btn-xs tbtn' %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
 
-  <tbody>
-    <% @ordens.each do |orden| %>
-      <tr>
-        <td><%= orden.cliente %></td>
-        <td><%= orden.fecha %></td>
-        <td><%= link_to 'Show', orden %></td>
-        <td><%= link_to 'Edit', edit_orden_path(orden) %></td>
-        <td><%= link_to 'Destroy', orden, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Orden', new_orden_path %>
+        <br>
+        <div class=menu>
+              <%= link_to 'New Orden', new_orden_path, class: 'btn btn-success .btn-lg btns'  %>
+        </div>
+    </body>
+<html>
