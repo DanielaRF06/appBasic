@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :clientes
   get 'home/index'
   get '/saludo', to:'home#saludo'
   root :to => 'home#index'
